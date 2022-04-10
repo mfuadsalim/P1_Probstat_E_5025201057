@@ -57,12 +57,14 @@ Repository Praktikum Probabilitas dan Statistika E
     probability = dbinom(x,n, prob = p, log = FALSE)
     probability
     ```
-    
+    ![2 A](https://user-images.githubusercontent.com/80630201/162624410-57ca1048-cbe7-4550-aa88-22067f866217.png)
    - b. Gambarkan grafik histogram berdasarkan kasus tersebut.
      ```R
      #Soal2.B
      hist(rbinom(x,n, prob = p), xlab = "X", ylab = "Frekuensi",main = "Histogram Kasus Covid-19")
      ```
+     ![2 B](https://user-images.githubusercontent.com/80630201/162624421-1b5e8f53-d0bd-4c43-80a1-2c431c550b94.png)
+     Histogram Kasus Covid-19
       ![Histogram 2 b](https://user-images.githubusercontent.com/80630201/162623900-5c81befa-8674-4bf7-98ad-1280cd0e720c.png)
       
    - c. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
@@ -74,3 +76,4 @@ Repository Praktikum Probabilitas dan Statistika E
       mean
       variance
       ```
+      ![2 C](https://user-images.githubusercontent.com/80630201/162624423-23ab7810-e553-4cca-9c5c-38229fda591f.png
