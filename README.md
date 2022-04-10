@@ -3,7 +3,7 @@ Repository Praktikum Probabilitas dan Statistika E
 
 | Nama                      | NRP         |
 |---------------------------|-------------|
-| Muhammad Fuad Salim       | 50252010057 |
+| Muhammad Fuad Salim       | 5025201057  |
 
 # Soal 1
 > Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.
