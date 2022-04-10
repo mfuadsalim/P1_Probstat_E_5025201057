@@ -77,3 +77,36 @@ Repository Praktikum Probabilitas dan Statistika E
       variance
       ```
       ![2 C](https://user-images.githubusercontent.com/80630201/162624423-23ab7810-e553-4cca-9c5c-38229fda591f.png)
+      
+ # Soal 3
+ > Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
+ - a. Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+  ```R
+  lambda = 4.5 
+
+  #Soal3.A
+  x = 6 
+  probability = dpois(x,lambda)
+  probability
+  ```
+  ![3 A](https://user-images.githubusercontent.com/80630201/162624604-c4815ca6-229e-4551-8980-21f5e2e0c788.png)
+  - b. simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)
+  ```R
+  #Soal3.B
+  x = 6 ; n = 365
+  hist(rpois(x,lambda ), main = "Histogram Poisson")
+  ```
+  ![3 B](https://user-images.githubusercontent.com/80630201/162624624-0f32a363-8608-4385-8ed5-7dbc59baaa7e.png)
+  - c. Bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+      
+      
+  - d. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+  ```R
+  #Soal3.D
+  mean = variance = lambda
+  mean
+  variance
+  ```
+  ![3 D](https://user-images.githubusercontent.com/80630201/162624636-9192f643-b8dc-4424-9f36-13cbf6a2bc57.png)
+  
+
