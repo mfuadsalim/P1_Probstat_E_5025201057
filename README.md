@@ -76,4 +76,4 @@ Repository Praktikum Probabilitas dan Statistika E
       mean
       variance
       ```
-      ![2 C](https://user-images.githubusercontent.com/80630201/162624423-23ab7810-e553-4cca-9c5c-38229fda591f.png
+      ![2 C](https://user-images.githubusercontent.com/80630201/162624423-23ab7810-e553-4cca-9c5c-38229fda591f.png)
