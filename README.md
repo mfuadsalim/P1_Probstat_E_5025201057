@@ -14,12 +14,14 @@ Repository Praktikum Probabilitas dan Statistika E
   P <- dgeom(x,p)
   P
   ```
+  ![1 A](https://user-images.githubusercontent.com/80630201/162623056-5402d423-4fd8-49be-99fe-83f1aead315d.png)
   - b.  mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
   ```R
   #Soal1.B
   mean(rgeom(n = 10000, prob = p) == 3)
   mean
   ```
+  ![1 B](https://user-images.githubusercontent.com/80630201/162623061-b40fb762-9c08-4e4f-a4de-e183eef354a2.png)
   - c. Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
   
       Kedua poin tersebut menghasilkan hasil yang berbeda. Pada poin A, dilakukan distribusi Geomterik biasa dan didapatkan nilai sebesar . Nilai tersebut merupakan      nilai terbesar dari peluang-peluang yang dapat terjadi pada kejadian tersebut. Sedangkan pada poin B, didapatkan hasil sebesar karena merupakan rata-rata dari semua peluang-peluang yang dapat terjadi pada kejadian tersebut. Untuk kebutuhan sampling, poin B lebih baik untuk digunakan daripada poin A.
@@ -32,6 +34,7 @@ Repository Praktikum Probabilitas dan Statistika E
     ```
     Histogram dari Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
    ![Histogram Distribusi Geometrik](https://user-images.githubusercontent.com/80630201/162623497-40ff5ff2-99ce-4d9f-a2bf-bc86f9117da9.png)
+   
   
   - e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
   ```R
@@ -41,7 +44,7 @@ Repository Praktikum Probabilitas dan Statistika E
   mean
   variance
   ```
-
+  ![1 D](https://user-images.githubusercontent.com/80630201/162623064-fd3ff3ff-5d57-4fcc-a495-87c24c8183ad.png)
 # Soal 2
  > Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
     
