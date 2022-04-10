@@ -109,4 +109,32 @@ Repository Praktikum Probabilitas dan Statistika E
   ```
   ![3 D](https://user-images.githubusercontent.com/80630201/162624636-9192f643-b8dc-4424-9f36-13cbf6a2bc57.png)
   
+# Soal 4
+> Diketahui nilai x = 2 dan v = 10. Tentukan:
+ - a. Fungsi Probabilitas dari Distribusi Chi-Square.
+ ```R
+  x = 2 ; v = 10
 
+  #Soal4.A
+  probability = dchisq(x,10)
+  probability
+  ```
+  ![4 A](https://user-images.githubusercontent.com/80630201/162625337-9732b272-078d-4c55-9089-71f907e27db0.png)
+ - b. Histogram dari Distribusi Chi-Square dengan 100 data random
+ ```R
+  #Soal4.B
+  n = 100
+  hist(rchisq(n,v), xlab = "X" , ylab = "V",main = "Histogram Chis Square")
+  ```
+  ![4 B](https://user-images.githubusercontent.com/80630201/162625345-e2751958-0a36-492d-9031-d1c331dcbda7.png)
+  Histogram dari Distribusi Chi-Square dengan 100 data random : 
+  ![histogram 4 b](https://user-images.githubusercontent.com/80630201/162625432-ad3db39e-2bc3-4479-b8c6-7d4dac0331b5.png)
+  - c. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiChi-Square
+  ```R
+  #Soal4.C
+  mean = v
+  variance = 2 * v
+  mean 
+  variance
+  ```
+  ![4 C](https://user-images.githubusercontent.com/80630201/162625351-bcd9224c-cbac-4802-b2fc-e46f2af5313e.png)
