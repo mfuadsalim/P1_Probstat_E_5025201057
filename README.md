@@ -31,3 +31,43 @@ Repository Praktikum Probabilitas dan Statistika E
     hist(rgeom(n,prob = p), main = "Histogram Distribusi Geometrik")
     ```
     Histogram dari Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+   ![Histogram Distribusi Geometrik](https://user-images.githubusercontent.com/80630201/162623497-40ff5ff2-99ce-4d9f-a2bf-bc86f9117da9.png)
+  
+  - e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
+  ```R
+  #Soal1.E
+  mean = 1/P
+  variance = (1-p)/(p^2)
+  mean
+  variance
+  ```
+
+# Soal 2
+ > Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
+    
+  - a. Peluang terdapat 4 pasien yang sembuh.
+    ```R
+    n = 20 ; p = 0.2
+
+    #Soal2.A
+    x = 4
+    probability = dbinom(x,n, prob = p, log = FALSE)
+    probability
+    ```
+    
+   - b. Gambarkan grafik histogram berdasarkan kasus tersebut.
+     ```R
+     #Soal2.B
+     hist(rbinom(x,n, prob = p), xlab = "X", ylab = "Frekuensi",main = "Histogram Kasus Covid-19")
+     ```
+      ![Histogram 2 b](https://user-images.githubusercontent.com/80630201/162623900-5c81befa-8674-4bf7-98ad-1280cd0e720c.png)
+      
+   - c. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+    
+      ```R
+      #Soal2.C
+      mean = n * (prob = p)
+      variance = n * (prob = p) * (1-(prob = p))
+      mean
+      variance
+      ```
