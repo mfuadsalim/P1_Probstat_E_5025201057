@@ -1,5 +1,5 @@
 # P1_Probstat_E_5025201057
-Repository Praktikum Probabilitas dan Statistika E
+Repository Praktikum Probabilitas dan Statistika E - Modul 1
 
 | Nama                      | NRP         |
 |---------------------------|-------------|
@@ -8,35 +8,68 @@ Repository Praktikum Probabilitas dan Statistika E
 # Soal 1
 > Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.
   - a. Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik)
+    
+    Pada poin ini akan dikerjakan menggunakan distribusi Geometrik, maka dari itu kita akan menggunakan fungsi `dgeom()`. Disini kita misalkan X adalah sampel orang yang tidak menghadiri acara vaksinasi dan P adalah peluang kehadiran orang yang menghadiri acara vaksinasi, keduanya akan menjadi parameter untuk fungsi `dgeom`. Dari fungsi tersebut akan didapatkan hasil peluang sebesar `0.1024`.
+    
+    Code : 
   ```R
   #Soal1.A
   x = 3 ; p = 0.20
   P <- dgeom(x,p)
   P
   ```
+  
+  Bukti ScreenShoot : 
   ![1 A](https://user-images.githubusercontent.com/80630201/162623056-5402d423-4fd8-49be-99fe-83f1aead315d.png)
+  
   - b.  mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
+      
+      Pada poin ini akan dicari rerata dari distribusi Geometrik dengan 1000 data random dan beberapa parameter yang telah tertera pada soal. Di sini kita akan menggunakan fungsi `rgeom()` dimana dalam fungsi tersebut berisi banyaknya data acak dan peluang kehadiran orang dalam menghadiri acara vaksinasi. Salah satu hasil yang didapatkan adalah `0.1037`.
+      
+      Code :
   ```R
   #Soal1.B
   mean(rgeom(n = 10000, prob = p) == 3)
   mean
   ```
+  
+  Bukti ScreenShoot:
   ![1 B](https://user-images.githubusercontent.com/80630201/162623061-b40fb762-9c08-4e4f-a4de-e183eef354a2.png)
   - c. Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
   
-      Kedua poin tersebut menghasilkan hasil yang berbeda. Pada poin A, dilakukan distribusi Geomterik biasa dan didapatkan nilai sebesar . Nilai tersebut merupakan      nilai terbesar dari peluang-peluang yang dapat terjadi pada kejadian tersebut. Sedangkan pada poin B, didapatkan hasil sebesar karena merupakan rata-rata dari semua peluang-peluang yang dapat terjadi pada kejadian tersebut. Untuk kebutuhan sampling, poin B lebih baik untuk digunakan daripada poin A.
+      Kedua poin tersebut menghasilkan dua hasil yang berbeda. Pada poin a dilakukan distribusi Geomterik biasa dan didapatkan nilai sebesar `0.1024`. Nilai tersebut merupakan      nilai terbesar dari peluang-peluang yang dapat terjadi pada kejadian tersebut. 
+      
+      Sedangkan pada poin b, didapatkan hasil sebesar `0.1037` karena merupakan rata-rata dari semua peluang-peluang yang dapat terjadi pada kejadian tersebut. 
+      
+      Untuk kebutuhan sampling, poin B lebih baik untuk digunakan daripada poin A.
       
   - d. Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+
+    Untuk membuat histogram pada bahasa `R` kita akan menggunakan fungsi `hist()` dengan angka acak dari fungsi distribusi Geometrik sebagai parameternya.
+    
+    Code :
+    
     ```R
     #Soal1.D
     n = 10000
     hist(rgeom(n,prob = p), main = "Histogram Distribusi Geometrik")
     ```
-    Histogram dari Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+    
+    Bukti ScreenShoot : 
+    
+  ![1d](https://user-images.githubusercontent.com/80630201/163003591-8e2f6fc3-c0ac-4969-bf50-9a9ade5cbf94.png)
+
+ Histogram dari Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama :
+    
    ![Histogram Distribusi Geometrik](https://user-images.githubusercontent.com/80630201/162623497-40ff5ff2-99ce-4d9f-a2bf-bc86f9117da9.png)
    
   
-  - e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
+  - e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.\
+    
+    Untuk mendapatkan nilai mean dan variance kita akan menggunakan rumus banyak data dibagi dengan peluang kejadian untuk mencari mean `(μ)` serta nilai rataan dibagi dengan kuadrat dari peluang kejadian untuk mencari variance `(σ²)`
+  
+  Code : 
+  
   ```R
   #Soal1.E
   mean = 1/P
@@ -44,6 +77,9 @@ Repository Praktikum Probabilitas dan Statistika E
   mean
   variance
   ```
+  
+  Bukti Screenshoot : 
+  
   ![1 D](https://user-images.githubusercontent.com/80630201/162623064-fd3ff3ff-5d57-4fcc-a495-87c24c8183ad.png)
 # Soal 2
  > Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
