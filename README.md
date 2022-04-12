@@ -22,7 +22,7 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
   Bukti ScreenShoot : 
   ![1 A](https://user-images.githubusercontent.com/80630201/162623056-5402d423-4fd8-49be-99fe-83f1aead315d.png)
   
-  - b.  mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
+  - b.  Mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
       
       Pada poin ini akan dicari rerata dari distribusi Geometrik dengan 1000 data random dan beberapa parameter yang telah tertera pada soal. Di sini kita akan menggunakan fungsi `rgeom()` dimana dalam fungsi tersebut berisi banyaknya data acak dan peluang kehadiran orang dalam menghadiri acara vaksinasi. Salah satu hasil yang didapatkan adalah `0.1037`.
       
@@ -55,13 +55,13 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
     hist(rgeom(n,prob = p), main = "Histogram Distribusi Geometrik")
     ```
     
-    Bukti ScreenShoot : 
+  Bukti ScreenShoot : 
     
   ![1d](https://user-images.githubusercontent.com/80630201/163003591-8e2f6fc3-c0ac-4969-bf50-9a9ade5cbf94.png)
 
  Histogram dari Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama :
     
-   ![Histogram Distribusi Geometrik](https://user-images.githubusercontent.com/80630201/162623497-40ff5ff2-99ce-4d9f-a2bf-bc86f9117da9.png)
+  ![Histogram Distribusi Geometrik](https://user-images.githubusercontent.com/80630201/162623497-40ff5ff2-99ce-4d9f-a2bf-bc86f9117da9.png)
    
   
   - e. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.\
@@ -85,6 +85,11 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
  > Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
     
   - a. Peluang terdapat 4 pasien yang sembuh.
+
+    Untuk mendapatkan nilai peluang tersebut kita akan menggunakan distribusi Binomial dengan menggunakan fungsi `dbinom()`. Dimana parameter dari fungsi tersebut berisi jumlah data pasien `n` dan peluang sembuhnya pasien `p`.
+    
+    Code :
+    
     ```R
     n = 20 ; p = 0.2
 
@@ -93,18 +98,36 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
     probability = dbinom(x,n, prob = p, log = FALSE)
     probability
     ```
+    
+    Bukti ScreenShoot :
+    
     ![2 A](https://user-images.githubusercontent.com/80630201/162624410-57ca1048-cbe7-4550-aa88-22067f866217.png)
+    
    - b. Gambarkan grafik histogram berdasarkan kasus tersebut.
+
+     Untuk membuat histogram pada bahasa `R` kita akan menggunakan fungsi `hist()` dengan angka acak dari fungsi distribusi Binomial sebagai parameternya.
+    
+     Code : 
+    
      ```R
      #Soal2.B
      hist(rbinom(x,n, prob = p), xlab = "X", ylab = "Frekuensi",main = "Histogram Kasus Covid-19")
      ```
+     
+     Bukti ScreenShoot : 
+     
      ![2 B](https://user-images.githubusercontent.com/80630201/162624421-1b5e8f53-d0bd-4c43-80a1-2c431c550b94.png)
-     Histogram Kasus Covid-19
+     
+     Histogram Distribusi Binomial Kasus Covid-19 : 
+     
       ![Histogram 2 b](https://user-images.githubusercontent.com/80630201/162623900-5c81befa-8674-4bf7-98ad-1280cd0e720c.png)
       
    - c. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+      
+      Untuk Mendapatkan nilai rataan `(μ)` kita akan menggunakan rumus banyak data `n` dikali dengan peluang kejadi `p`. Dan untuk mencari nilai variance `(σ²)` kita akan menggunakan rumus nilai rataan `(μ)` dikali dengan komplemen peluang kejadian `1-p`.
     
+      Code :
+      
       ```R
       #Soal2.C
       mean = n * (prob = p)
@@ -112,27 +135,31 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
       mean
       variance
       ```
+      
+      Bukti ScreenShoot :
       ![2 C](https://user-images.githubusercontent.com/80630201/162624423-23ab7810-e553-4cca-9c5c-38229fda591f.png)
       
  # Soal 3
  > Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
  - a. Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
-  ```R
-  lambda = 4.5 
+    ```R
+    lambda = 4.5 
 
-  #Soal3.A
-  x = 6 
-  probability = dpois(x,lambda)
-  probability
-  ```
-  ![3 A](https://user-images.githubusercontent.com/80630201/162624604-c4815ca6-229e-4551-8980-21f5e2e0c788.png)
+    #Soal3.A
+    x = 6 
+    probability = dpois(x,lambda)
+    probability
+    ```
+    ![3 A](https://user-images.githubusercontent.com/80630201/162624604-c4815ca6-229e-4551-8980-21f5e2e0c788.png)
+    
   - b. simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)
-  ```R
-  #Soal3.B
-  x = 6 ; n = 365
-  hist(rpois(x,lambda ), main = "Histogram Poisson")
-  ```
-  ![3 B](https://user-images.githubusercontent.com/80630201/162624624-0f32a363-8608-4385-8ed5-7dbc59baaa7e.png)
+    ```R
+    #Soal3.B
+    x = 6 ; n = 365
+    hist(rpois(x,lambda ), main = "Histogram Poisson")
+    ```
+    
+    ![3 B](https://user-images.githubusercontent.com/80630201/162624624-0f32a363-8608-4385-8ed5-7dbc59baaa7e.png)
   - c. Bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
       
       
