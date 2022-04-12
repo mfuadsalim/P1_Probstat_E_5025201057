@@ -391,4 +391,5 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
       Bukti ScreenShoot : 
      
       ![6 C](https://user-images.githubusercontent.com/80630201/163015888-185421ed-6037-4ede-94b3-e40612b6274d.png)
-     
+    
+## Sekian Terima Kasih :D    
