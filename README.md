@@ -300,7 +300,7 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
        
        ![histogram 5 b 4](https://user-images.githubusercontent.com/80630201/163011787-5b5df8c0-8028-4251-bde4-4ecb69376158.png)
        
-    - c. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+  - c. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
        
        Untuk mendapatkan nilai rataan `(μ)` kita akan menggunakan rumus `mwan()` dengan parameter angka acak dari Distribusi Eksponensial. Dan untuk mendapatkan nilai variance kita akan menggunakan rumus `sd()` atau standar deviasi dengan parameter angka acak dari Distribusi Eksponensial dan kemudian dikuadratkan.
        
@@ -322,11 +322,11 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
        
 # Soal 6
 > Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan :
-       - a. Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
-
-   Pada poin ini untuk mendapatkan Z-score, pertama akan dilakukan generate random number dengan menggunakan fungsi `rnorm()`. Kemudian, akan dilakukan penentuan nilai `X1` dan `X2` yang nantinya digunakan dalam membuat plot grafik
-   
+  - a. Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
+    Pada poin ini untuk mendapatkan Z-score, pertama akan dilakukan generate random number dengan menggunakan fungsi `rnorm()`. Kemudian, akan dilakukan penentuan nilai `X1` dan `X2` yang nantinya digunakan dalam membuat plot grafik.
+        
        Code : 
+       
        ```R
        n = 100; mean = 50; sd = 8
 
@@ -352,7 +352,13 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
        
        Bukti ScreenShoot : 
        
+       ![6 A](https://user-images.githubusercontent.com/80630201/163015870-dd3fd6e2-72f1-4093-9e93-2af80f1932b2.png)
        
+       Hasil Generate Plot : 
+       
+       ![plotdata6](https://user-images.githubusercontent.com/80630201/163015896-399ea25f-54db-4ee5-b22f-5b1936dda66d.png)
+       
+
    - b. Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan: `NRP_Nama_Probstat_{Nama Kelas}_DNhistogram`
      Untuk membuat histogram pada bahasa `R` kita akan menggunakan fungsi `hist()` dengan angka acak dari fungsi Distribusi Normal dengan parameter yaitu data dan nilai breaks.
      
@@ -363,23 +369,26 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
      hist(data, breaks, main = "5025201057_Muhammad Fuad Salim_Probstat_E_Histogram")
      ```
      
-     Bukti ScreenShoot :
+      Bukti ScreenShoot :
      
-     Histogram Distribusi Normal dengan breaks 50 : 
+      ![6 B](https://user-images.githubusercontent.com/80630201/163015883-273c5394-8ca3-4eb5-80ae-fcf77aaaa71d.png)
      
+      Histogram Distribusi Normal dengan breaks 50 : 
      
+      ![histogram 6 b](https://user-images.githubusercontent.com/80630201/163015893-0589f8a4-2586-432f-9c4a-6202eb7e9075.png)
 
    - c. Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal
       
      Untuk mendapatkan nilai variance kita akan menggunakan rumus kuadrat dari standar deviasi `sd`.
      
-     Code : 
-     ```R
-     #Soal6.C
-     variance = (sd(data)) ^ 2
-     variance
-     ```
+      Code : 
+      ```R
+      #Soal6.C
+      variance = (sd(data)) ^ 2
+      variance
+      ```
      
-     Bukti ScreenShoot : 
+      Bukti ScreenShoot : 
      
+      ![6 C](https://user-images.githubusercontent.com/80630201/163015888-185421ed-6037-4ede-94b3-e40612b6274d.png)
      
