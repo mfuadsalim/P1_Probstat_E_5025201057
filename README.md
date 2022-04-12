@@ -232,7 +232,8 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
       
   - c. Nilai Rataan (μ) dan Varian (σ²) dari DistribusiChi-Square
 
-      Untuk mendapatkan nilai rataan `(μ)` kita akan menggunakan nilai `v` sebagai nilai rataan `(μ)`
+      Untuk mendapatkan nilai rataan `(μ)` kita akan menggunakan nilai `v` sebagai nilai rataan `(μ)`. Dan untuk mendapatkan nilai variace kita akan mendapatkannya dengan cara mengalikan nilai dari `v` dengan 2.
+      
       Code :
       ```R
       #Soal4.C
