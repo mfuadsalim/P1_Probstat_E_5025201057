@@ -246,3 +246,80 @@ Repository Praktikum Probabilitas dan Statistika E - Modul 1
       Bukti ScreenShoot :
       
       ![4 C](https://user-images.githubusercontent.com/80630201/162625351-bcd9224c-cbac-4802-b2fc-e46f2af5313e.png)
+      
+# Soal 5
+> Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan :
+  - a. Fungsi Probabilitas dari Distribusi Exponensial
+       Di sini kita akan menggunakan fungsi `dexp` untuk menemukan fungsi probabilitas dari Distribusi Eksponensial dimana di dalam fungsi tersebut berisi banyaknya data dan rate `λ` sebagai parameter dari fungsi ini.
+       
+       Code :
+       ```R
+       lambda = 3 
+
+       #Soal5.A
+       set.seed(10)
+
+       probability  = rexp(10, rate = lambda)
+       probability
+       ```
+       
+       Bukti ScreenShoot : 
+       
+       ![5 A](https://user-images.githubusercontent.com/80630201/163011728-270df504-e983-4303-bba3-f8ce4f899574.png)
+       
+  - b. Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+        
+       Untuk membuat histogram pada bahasa `R` kita akan menggunakan fungsi `hist()` dengan angka acak dari fungsi distribusi Eksponensial dan variasi pada jumlah data yang digunakan yakni (10,100,1000,dan 10000) sebagai parameternya.
+       
+       Code : 
+       ```R
+       #Soal5.B
+       hist(rexp(10, rate = lambda), main = "Histogram Exponential untuk 10 Bilangan Random")
+       hist(rexp(100, rate = lambda), main = "Histogram Exponential untuk 100 Bilangan Random")
+       hist(rexp(1000, rate = lambda), main = "Histogram Exponential untuk 1000 Bilangan Random")
+       hist(rexp(10000, rate = lambda), main = "Histogram Exponential untuk 10000 Bilangan Random")
+       ```
+       
+       Bukti Screen Shoot :
+       
+       ![5 B1](https://user-images.githubusercontent.com/80630201/163011745-65af2a7c-70d1-42e5-9fa9-b423224978ff.png)
+       
+       Histogram dari Distribusi Eksponensial variasi 10 :
+       
+       ![histogram 5 b 1](https://user-images.githubusercontent.com/80630201/163011773-cddfed3c-df62-439b-a3c0-c7384048d8c7.png)
+       
+       Histogram dari Distribusi Eksponensial variasi 100 :
+       
+       ![histogram 5 b 2](https://user-images.githubusercontent.com/80630201/163011776-5e9d223d-126b-47d2-a0be-265876f483ac.png)
+       
+       Histogram dari Distribusi Eksponensial variasi 1000 :
+       
+       ![histogram 5 b 3](https://user-images.githubusercontent.com/80630201/163011782-96f2e70d-5c91-4a6e-9ae1-169864b733d6.png)
+       
+       Histogram dari Distribusi Eksponensial variasi 10000 :
+       
+       ![histogram 5 b 4](https://user-images.githubusercontent.com/80630201/163011787-5b5df8c0-8028-4251-bde4-4ecb69376158.png)
+       
+  - C. Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+       
+       Untuk mendapatkan nilai rataan `(μ)` kita akan menggunakan rumus `mwan()` dengan parameter angka acak dari Distribusi Eksponensial. Dan untuk mendapatkan nilai variance kita akan menggunakan rumus `sd()` atau standar deviasi dengan parameter angka acak dari Distribusi Eksponensial dan kemudian dikuadratkan.
+       
+       Code : 
+       
+       ```R
+       #Soal5.C
+       n = 100
+       set.seed(1)
+       mean = mean(rexp(n, rate = lambda))
+       variance = (sd(rexp(n, rate = lambda))) ^ 2
+       mean
+       variance
+       ```
+       
+       Bukti ScreenShoot :
+       
+       ![5 C](https://user-images.githubusercontent.com/80630201/163011768-031f2ad4-907f-4a90-a2db-17cd6cffeb2f.png)
+       
+# Soal 6
+
+ 
